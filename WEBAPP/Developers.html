@@ -4,13 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developers</title>
+    <style>
+        /* Garante que o HTML e o Body ocupem 100% da altura da janela */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        /* Estilos para os links de navegação */
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para a seção principal */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        /* Estilo para os parágrafos dos desenvolvedores */
+        main p {
+            font-size: 1.3em; /* Aumenta o tamanho da fonte dos nomes */
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: auto;
+        }
+
+    </style>
 </head>
 <body>
-    <header>
-        <h1><a href="Home.html">Home</a></h1>
-    </header>
-    <main>
-        <p>Esta é a página inicial. Clique no título acima para saber mais sobre o projeto.</p>
-    </main>
+<header>
+    <h1>MY METRO</h1>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="App.html">App</a>
+        <a href="Features.html">Features</a>
+        <a href="Developers.html">Developers</a>
+    </nav>
+</header>
+<main>
+    <h2>Conheça os desenvolvedores responsáveis por este projeto:</h2>
+
+    <p>Fabio Costa - 1240826</p>
+    <p>Tiago Oliveira - 1241460</p>
+    <p>Dinis Silva - 1240824</p>
+
+</main>
+<footer>
+    <p>&copy; 2024. Todos os direitos reservados.</p>
+</footer>
 </body>
 </html>
