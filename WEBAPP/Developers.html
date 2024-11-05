@@ -55,9 +55,43 @@
             margin: 10px;
         }
 
-        /* Estilo para os parágrafos dos desenvolvedores */
-        main p {
-            font-size: 1.3em; /* Aumenta o tamanho da fonte dos nomes */
+        /* Estilo para os cartões */
+        .cartao-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espaço entre os cartões */
+            flex-wrap: wrap; /* Para o caso de o tamanho da tela ser menor */
+            padding-top: 20px;
+        }
+
+        .cartao {
+            width: 280px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco e semi-transparente */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cartao img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .cartao-conteudo {
+            padding: 15px;
+        }
+
+        .cartao-titulo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .cartao-texto {
+            font-size: 1.1em;
+            color: #333;
         }
 
         /* Estilo para o rodapé */
@@ -80,16 +114,44 @@
         <a href="Developers.html">Developers</a>
     </nav>
 </header>
+
 <main>
     <h2>Meet our developers:</h2>
 
-    <p>Dinis Silva - 1240824</p>
-    <p>Fábio Costa - 1240826</p>
-    <p>Tiago Oliveira - 1241460</p>
+    <!-- Container dos cartões -->
+    <div class="cartao-container">
+        <!-- Cartão 1 -->
+        <div class="cartao">
+            <img src="https://via.placeholder.com/300x200" alt="Imagem Dinis Silva">
+            <div class="cartao-conteudo">
+                <div class="cartao-titulo">Dinis Silva</div>
+                <p class="cartao-texto">1240824</p>
+            </div>
+        </div>
 
+        <!-- Cartão 2 -->
+        <div class="cartao">
+            <img src="https://via.placeholder.com/300x200" alt="Imagem Fábio Costa">
+            <div class="cartao-conteudo">
+                <div class="cartao-titulo">Fábio Costa</div>
+                <p class="cartao-texto">1240826</p>
+            </div>
+        </div>
+
+        <!-- Cartão 3 -->
+        <div class="cartao">
+            <img src="https://via.placeholder.com/300x200" alt="Imagem Tiago Oliveira">
+            <div class="cartao-conteudo">
+                <div class="cartao-titulo">Tiago Oliveira</div>
+                <p class="cartao-texto">1241460</p>
+            </div>
+        </div>
+    </div>
 </main>
+
 <footer>
     <p>&copy; 2024. Todos os direitos reservados.</p>
 </footer>
+
 </body>
 </html>
