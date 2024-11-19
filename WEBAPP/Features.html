@@ -2,16 +2,20 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features</title>
+    <title>Features - MY METRO</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         html, body {
+            font-family: Arial, sans-serif;
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
             color: #fff;
             background-image: url('imagem_fundo.jpg');
             background-size: cover;
@@ -21,15 +25,13 @@
             flex-direction: column;
         }
 
-
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             border-radius: 8px;
             margin: 10px;
         }
-
 
         nav a {
             color: #fff;
@@ -41,7 +43,6 @@
         nav a:hover {
             text-decoration: underline;
         }
-
 
         main {
             flex: 1;
@@ -56,40 +57,186 @@
             margin: 10px;
         }
 
-
-        main p {
-            font-size: 1.3em;
+        .slider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 1200px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
+        .feature-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            padding: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .feature-slide img {
+            width: 40%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-content {
+            width: 55%;
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .feature-content h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        .feature-content p {
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            color: #fff;
+            font-size: 2.5em;
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .arrow-left {
+            left: 20px;
+        }
+
+        .arrow-right {
+            right: 20px;
+        }
 
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-top: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+            border-radius: 8px;
         }
 
+        @media (max-width: 768px) {
+            .feature-slide {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature-slide img {
+                width: 80%;
+            }
+
+            .feature-content {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 <header>
-    <h1>
-        <img src="logo.png" width="160" height="110"></img>
-    </h1>
+    <h1>MY METRO</h1>
     <nav>
         <a href="Home.html">Home</a>
-        <a href="Problem.html">Problem</a>
-        <a href="Features.html">Features</a>
         <a href="App.html">App</a>
+        <a href="Features.html">Features</a>
         <a href="Developers.html">Developers</a>
     </nav>
 </header>
+
 <main>
-
-
+    <h2>Funcionalidades da Aplicação</h2>
+    <div class="slider">
+        <button class="arrow arrow-left" onclick="prevSlide()">&#8249;</button>
+        <div class="feature-slide" id="featureSlides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="sign_up_app.png" alt="Página de log-in">
+                <div class="feature-content">
+                    <h3>Página de log-in.</h3>
+                    <p>Esta é a página inicial da app, que te permite iniciar sessão e descobrir o que temos a oferecer.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="info_app.png" alt="Página informativa">
+                <div class="feature-content">
+                    <h3>Página informativa.</h3>
+                    <p>Esta é a página onde podes ver todas as informações sobre o metro, incluindo horários, lotação, e frequências.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="feedback_app.png" alt="Página de feedback">
+                <div class="feature-content">
+                    <h3>Página de feedback.</h3>
+                    <p>Deixa o teu feedback sobre o metro para ajudar a melhorar os serviços para todos.</p>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="chat_app.png" alt="Página de chat">
+                <div class="feature-content">
+                    <h3>Página de chat.</h3>
+                    <p>Conversa com outros utilizadores para obter informações ou resolver problemas.</p>
+                </div>
+            </div>
+        </div>
+        <button class="arrow arrow-right" onclick="nextSlide()">&#8250;</button>
+    </div>
 </main>
+
 <footer>
-    <p>&copy; 2024. Todos os direitos reservados.</p>
+    <p>&copy; 2024. Instituto Superior de Engenharia do Porto.</p>
 </footer>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'flex' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Mostrar o primeiro slide ao carregar a página
+    showSlide(currentSlide);
+</script>
+
 </body>
 </html>
