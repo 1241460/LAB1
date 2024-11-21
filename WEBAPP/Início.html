@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('imagem_fundo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 160px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #093eec;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 120px; /* Para compensar o cabeçalho fixo */
+            padding: 20px;
+        }
+
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+            padding: 30px;
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona um leve sombreado */
+            text-align: center;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #FFCC00;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #093eec;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: white;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: auto;
+            width: 100%;
+        }
+
+        footer p {
+            color: white;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        <img src="logo.png" alt="Logo">
+    </h1>
+    <nav>
+        <a href="Início.html">INÍCIO</a>
+        <a href="Desafio.html">DESAFIO</a>
+        <a href="App.html">APP</a>
+        <a href="Funcionalidades.html">FUNCIONALIDADES</a>
+        <a href="Desenvolvedores.html">DESENVOLVEDORES</a>
+    </nav>
+</header>
+
+<main>
+    <div class="text-box">
+        <h1>MYMETRO</h1>
+        <h2>A CONCEPT IN MOTION</h2>
+        <p>O mymetro é uma aplicação inovadora pensada para resolver os principais desafios de quem utiliza o metro na cidade do Porto. Com funcionalidades práticas e soluções inteligentes, a app visa otimizar a experiência dos passageiros, tornando o transporte mais eficiente e acessível. Acompanhe o seu percurso de forma simples e rápida, e tenha tudo o que precisa na palma da sua mão.</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
