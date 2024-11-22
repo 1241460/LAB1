@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - MY METRO</title>
+    <title>Funcionalidades - MY METRO</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Garante que o HTML e o Body ocupem 100% da altura da janela */
         html, body {
-            font-family: Arial, sans-serif;
             height: 100%;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             color: #fff;
             background-image: url('imagem_fundo.jpg');
             background-size: cover;
@@ -25,7 +20,7 @@
             flex-direction: column;
         }
 
-        /* Estilo para o cabeçalho */
+        /* Estilos para o cabeçalho */
         header {
             text-align: center;
             padding: 20px;
@@ -39,11 +34,16 @@
             height: 110px;
         }
 
+        header h1 {
+            text-transform: uppercase;
+        }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
+            text-transform: uppercase; /* Torna o texto em maiúsculas */
         }
 
         nav a:hover {
@@ -51,7 +51,7 @@
             color: #093eec;
         }
 
-        /* Estilo para o conteúdo principal */
+        /* Estilo para a seção principal */
         main {
             flex: 1;
             display: flex;
@@ -65,26 +65,24 @@
             margin: 10px;
         }
 
-        .left-side h1 {
-            font-size: 2.5em;
-            color: #fff;
+        main h1 {
+            font-size: 2.2em;
             margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .left-side h2 {
-            font-size: 1.5em;
             color: #fff;
-            margin-bottom: 20px;
-            text-transform: uppercase;
         }
 
+        main h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        /* Estilo para o rodapé */
         footer {
             text-align: center;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.8);
-            margin-top: 20px;
-            border-radius: 8px;
+            margin-top: auto;
         }
 
         footer p {
@@ -108,10 +106,8 @@
 </header>
 
 <main>
-    <div class="left-side">
-        <h1>Funcionalidades da Aplicação</h1>
-        <h2>Explore as principais funcionalidades do My Metro</h2>
-    </div>
+    <h1>Funcionalidades da Aplicação</h1>
+    <h2>Explore as principais funcionalidades do My Metro</h2>
 </main>
 
 <footer>

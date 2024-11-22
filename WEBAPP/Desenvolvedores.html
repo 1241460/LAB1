@@ -2,9 +2,8 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developers</title>
+    <title>Desenvolvedores - MY METRO</title>
     <style>
         /* Garante que o HTML e o Body ocupem 100% da altura da janela */
         html, body {
@@ -25,21 +24,41 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             border-radius: 8px;
             margin: 10px;
         }
 
-        /* Estilos para os links de navegação */
+        header img {
+            width: 160px;
+            height: 110px;
+        }
+
+        header h1 {
+            text-transform: uppercase;
+        }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
+            text-transform: uppercase; /* Torna o texto em maiúsculas */
         }
 
         nav a:hover {
             text-decoration: underline;
+            color: #093eec;
+        }
+
+        /* Estilo para o link ativo (página em que você está) */
+        nav a.active {
+            color: #093eec; /* Azul para o link ativo */
+        }
+
+        /* Não alterar a cor do "Desenvolvedores" se já estiver ativo */
+        nav a[href="Desenvolvedores.html"] {
+            color: #fff; /* Link permanece branco */
         }
 
         /* Estilo para a seção principal */
@@ -54,6 +73,12 @@
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             margin: 10px;
+        }
+
+        main h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #fff;
         }
 
         /* Estilo para os cartões */
@@ -99,24 +124,27 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             margin-top: auto;
         }
 
+        footer p {
+            color: white;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
 <header>
     <h1>
-        <img src="logo.png" width="160" height="110"></img>
-
+        <img src="logo.png" alt="Logo">
     </h1>
     <nav>
-        <a href="Início.html">INÍCIO</a>
-        <a href="Desafio.html">DESAFIO</a>
-        <a href="App.html">APP</a>
-        <a href="Funcionalidades.html">FUNCIONALIDADES</a>
-        <a href="Desenvolvedores.html">DESENVOLVEDORES</a>
+        <a href="Início.html">Início</a>
+        <a href="Desafio.html">Desafio</a>
+        <a href="App.html">App</a>
+        <a href="Funcionalidades.html">Funcionalidades</a>
+        <a href="Desenvolvedores.html" class="active">Desenvolvedores</a> <!-- Página ativa -->
     </nav>
 </header>
 
@@ -127,7 +155,7 @@
     <div class="cartao-container">
         <!-- Cartão 1 -->
         <div class="cartao">
-            <img src=dinis.jpg alt="Imagem Dinis Silva">
+            <img src="dinis.jpg" alt="Imagem Dinis Silva">
             <div class="cartao-conteudo">
                 <div class="cartao-titulo">Dinis Silva</div>
                 <p class="cartao-texto">1240824</p>
@@ -136,7 +164,7 @@
 
         <!-- Cartão 2 -->
         <div class="cartao">
-            <img src=fabio.jpg alt="Imagem Fábio Costa">
+            <img src="fabio.jpg" alt="Imagem Fábio Costa">
             <div class="cartao-conteudo">
                 <div class="cartao-titulo">Fábio Costa</div>
                 <p class="cartao-texto">1240826</p>
@@ -145,7 +173,7 @@
 
         <!-- Cartão 3 -->
         <div class="cartao">
-            <img src=tiago.jpg alt="Imagem Tiago Oliveira">
+            <img src="tiago.jpg" alt="Imagem Tiago Oliveira">
             <div class="cartao-conteudo">
                 <div class="cartao-titulo">Tiago Oliveira</div>
                 <p class="cartao-texto">1241460</p>
@@ -155,8 +183,24 @@
 </main>
 
 <footer>
-    <p>&copy; 2024. Todos os direitos reservados.</p>
+    <p>&copy; 2024. Instituto Superior de Engenharia do Porto.</p>
 </footer>
+
+<script>
+    // Seleciona todos os links de navegação
+    const links = document.querySelectorAll('nav a');
+
+    // Adiciona o evento de clique a cada link
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove a classe 'active' de todos os links
+            links.forEach(l => l.classList.remove('active'));
+
+            // Adiciona a classe 'active' no link clicado
+            this.classList.add('active');
+        });
+    });
+</script>
 
 </body>
 </html>
