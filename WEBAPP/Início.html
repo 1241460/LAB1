@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Developers</title>
     <style>
+        /* Garante que o HTML e o Body ocupem 100% da altura da janela */
         html, body {
             height: 100%;
             margin: 0;
@@ -20,34 +21,26 @@
             flex-direction: column;
         }
 
+        /* Estilos para o cabeçalho */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.7);
             text-align: center;
-            z-index: 1000;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin: 10px;
         }
 
         header img {
             width: 160px;
-            height: auto;
+            height: 110px;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
+        /* Estilos para os links de navegação */
         nav a {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
-            text-transform: uppercase;
         }
 
         nav a:hover {
@@ -55,58 +48,63 @@
             color: #093eec;
         }
 
+        /* Estilo para a seção principal */
         main {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 120px; /* Para compensar o cabeçalho fixo */
-            padding: 20px;
-        }
-
-        .text-box {
-            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
-            padding: 30px;
-            border-radius: 10px; /* Bordas arredondadas */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona um leve sombreado */
             text-align: center;
-            max-width: 900px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            margin: 10px;
         }
 
-        h1 {
-            font-size: 4em;
-            color: #FFCC00;
+        /* Título da seção principal */
+        .left-side h1 {
+            font-size: 2.5em;
+            color: #fff;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
 
-        h2 {
-            font-size: 2.5em;
-            color: #093eec;
+        /* Subtítulo da seção principal */
+        .left-side h2 {
+            font-size: 1.5em;
+            color: #fff;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
 
-        p {
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .text-box p {
             font-size: 1.5em;
             color: white;
             line-height: 1.6;
-            margin: 0;
         }
 
+        /* Estilo para o rodapé */
         footer {
             text-align: center;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
             margin-top: auto;
-            width: 100%;
         }
 
         footer p {
             color: white;
             font-size: 1em;
         }
+
     </style>
 </head>
 <body>
@@ -125,10 +123,12 @@
 </header>
 
 <main>
+    <div class="left-side">
+        <h1>O DESAFIO DA SOBRELOTAÇÃO NO METRO DO PORTO</h1>
+        <h2>OS SERVIÇOS NÃO ACOMPANHAM A PROCURA</h2>
+    </div>
     <div class="text-box">
-        <h1>MYMETRO</h1>
-        <h2>A CONCEPT IN MOTION</h2>
-        <p>O mymetro é uma aplicação inovadora pensada para resolver os principais desafios de quem utiliza o metro na cidade do Porto. Com funcionalidades práticas e soluções inteligentes, a app visa otimizar a experiência dos passageiros, tornando o transporte mais eficiente e acessível. Acompanhe o seu percurso de forma simples e rápida, e tenha tudo o que precisa na palma da sua mão.</p>
+        <p>A sobrelotação é um problema crescente no Metro do Porto, especialmente nos horários de maior movimento. Carruagens cheias, falta de conforto e dificuldades de distribuição dos passageiros comprometem a eficiência e a experiência de quem depende deste transporte diariamente.</p>
     </div>
 </main>
 
