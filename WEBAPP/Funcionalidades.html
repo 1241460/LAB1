@@ -2,8 +2,9 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funcionalidades - MY METRO</title>
+    <title>Funcionalidades</title>
     <style>
         /* Garante que o HTML e o Body ocupem 100% da altura da janela */
         html, body {
@@ -34,16 +35,12 @@
             height: 110px;
         }
 
-        header h1 {
-            text-transform: uppercase;
-        }
-
+        /* Estilos para os links de navegação */
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
-            text-transform: uppercase; /* Torna o texto em maiúsculas */
         }
 
         nav a:hover {
@@ -65,18 +62,6 @@
             margin: 10px;
         }
 
-        main h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        main h2 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
         /* Estilo para o rodapé */
         footer {
             text-align: center;
@@ -89,30 +74,156 @@
             color: white;
             font-size: 1em;
         }
+
+        /* Estilos adicionais para a página Funcionalidades */
+        .feature-item {
+            width: 100%;
+            max-width: 1000px; /* Aumenta a largura geral das funcionalidades */
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: space-between; /* Coloca a imagem e o texto com maior espaço entre eles */
+        }
+
+        .feature-item img {
+            max-width: 300px; /* Limita a largura máxima das imagens */
+            height: auto; /* Ajusta a altura proporcionalmente à largura */
+            margin-right: 50px; /* Aumenta o espaço entre a imagem e o texto */
+            border-radius: 8px;
+        }
+
+        .feature-item .text-box {
+            width: 100%;
+            max-width: 750px; /* Aumenta a largura do texto, permitindo mais espaço para o conteúdo */
+        }
+
+        .feature-item h3 {
+            font-size: 2.2em; /* Aumenta o tamanho do título */
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .feature-item p {
+            font-size: 1.4em; /* Ajusta o tamanho do texto */
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Estilo dos botões de navegação */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .nav-buttons button {
+            background-color: #001f55; /* Azul escuro (como o logo) */
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #00468c; /* Azul mais claro para o hover */
+        }
+
     </style>
 </head>
 <body>
+
 <header>
     <h1>
         <img src="logo.png" alt="Logo">
     </h1>
     <nav>
-        <a href="Início.html">Início</a>
-        <a href="Desafio.html">Desafio</a>
-        <a href="App.html">App</a>
-        <a href="Funcionalidades.html">Funcionalidades</a>
-        <a href="Desenvolvedores.html">Desenvolvedores</a>
+        <a href="Início.html">INÍCIO</a>
+        <a href="Desafio.html">DESAFIO</a>
+        <a href="App.html">APP</a>
+        <a href="Funcionalidades.html">FUNCIONALIDADES</a>
+        <a href="Desenvolvedores.html">DESENVOLVEDORES</a>
     </nav>
 </header>
 
 <main>
-    <h1>Funcionalidades da Aplicação</h1>
-    <h2>Explore as principais funcionalidades do My Metro</h2>
+    <!-- Funcionalidade 1 com imagem e texto lado a lado -->
+    <div class="feature-item">
+        <img src="informacoes.png" alt="Informações">
+        <div class="text-box">
+            <h3>Página Informativa</h3>
+            <p>Vê o tempo de espera em tempo real nas estações do Metro, a frequência de passagem, entre outras informações úteis.</p>
+        </div>
+    </div>
+
+    <!-- Funcionalidade 2 com imagem e texto lado a lado -->
+    <div class="feature-item">
+        <img src="chat.png" alt="Chat">
+        <div class="text-box">
+            <h3>Página de Chat</h3>
+            <p>Fala com os outros utilizadores do Metro. Aqui podes aceder às tuas conversas e interagir com a comunidade.</p>
+        </div>
+    </div>
+
+    <!-- Funcionalidade 3 com imagem e texto lado a lado -->
+    <div class="feature-item">
+        <img src="favoritos.png" alt="Favoritos">
+        <div class="text-box">
+            <h3>Página de Favoritos</h3>
+            <p>Adiciona as tuas localizações preferenciais e guarda-as aqui. Sempre que quiseres ir para um dos locais selecionados basta vires aqui!</p>
+        </div>
+    </div>
+
+    <!-- Funcionalidade 4 com imagem e texto lado a lado -->
+    <div class="feature-item">
+        <img src="favoritos.png" alt="Ferramenta AI">
+        <div class="text-box">
+            <h3>Página de Ferramenta AI</h3>
+            <p>Utiliza a nossa ferramenta de IA para o que precisares. Desde rotas alternativas, melhores horários, etc. Ela está aqui para te ajudar!</p>
+        </div>
+    </div>
+
+    <!-- Botões para navegação -->
+    <div class="nav-buttons">
+        <button onclick="showFeature(1)">Página Informativa</button>
+        <button onclick="showFeature(2)">Página de Chat</button>
+        <button onclick="showFeature(3)">Página de Favoritos</button>
+        <button onclick="showFeature(4)">Página de Ferramenta AI</button>
+    </div>
 </main>
 
 <footer>
-    <p>&copy; 2024. Instituto Superior de Engenharia do Porto.</p>
+    <p>LAPR1 - LEI. Instituto Superior de Engenharia do Porto. 2024.</p>
 </footer>
+
+<script>
+    // Função para mostrar a funcionalidade selecionada
+    function showFeature(featureNumber) {
+        // Esconde todas as funcionalidades
+        let features = document.querySelectorAll('.feature-item');
+        features.forEach(function(feature) {
+            feature.style.display = 'none';
+        });
+
+        // Exibe a funcionalidade correspondente
+        let selectedFeature = document.querySelectorAll('.feature-item')[featureNumber - 1];
+        if (selectedFeature) {
+            selectedFeature.style.display = 'flex';
+        }
+    }
+
+    // Exibe a primeira funcionalidade por padrão
+    showFeature(1);
+</script>
 
 </body>
 </html>

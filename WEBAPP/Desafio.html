@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Desafio</title>
     <style>
         /* Garante que o HTML e o Body ocupem 100% da altura da janela */
         html, body {
@@ -25,7 +25,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8); /* Alterei a opacidade para escurecer mais */
+            background-color: rgba(0, 0, 0, 0.8); /* Escurece mais o fundo */
             border-radius: 8px;
             margin: 10px;
         }
@@ -37,7 +37,7 @@
 
         /* Estilos para os links de navegação */
         nav a {
-            color: #fff;
+            color: #FFD700;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
@@ -52,25 +52,25 @@
         main {
             flex: 1;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
             margin: 10px;
+            background-color: rgba(0, 0, 0, 0.3); /* Aplica um fundo transparente sobre a imagem */
+            border-radius: 8px;
         }
 
         .left-side {
             text-align: left;
-            margin-right: 30px;
+            margin-bottom: 30px;
         }
 
-        /* Título agora menor e branco */
+        /* Título azul, como o do logo */
         .left-side h1 {
             font-size: 2.5em; /* Tamanho reduzido */
-            color: #fff; /* Cor branca */
+            color: #fff; /* Cor azul do logo */
             margin-bottom: 10px;
             text-transform: uppercase;
         }
@@ -83,17 +83,34 @@
             text-transform: uppercase;
         }
 
+        /* Caixa de texto */
         .text-box {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #001f55; /* Azul escuro como os botões */
             padding: 30px;
             border-radius: 8px;
-            max-width: 600px;
-            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .text-content {
+            max-width: 80%; /* O texto ocupa 80% do espaço */
+            color: white;
+            text-align: justify; /* Justificar o texto */
+        }
+
+        .text-box h3 {
+            font-size: 2em;
+            color: #FFD700;
+            margin-bottom: 10px;
         }
 
         .text-box p {
-            font-size: 1.5em;
-            color: white;
+            font-size: 1.2em;
             line-height: 1.6;
         }
 
@@ -130,15 +147,17 @@
 <main>
     <div class="left-side">
         <h1>O DESAFIO DA SOBRELOTAÇÃO NO METRO DO PORTO</h1>
-        <h2>OS SERVIÇOS NÃO ACOMPANHAM A PROCURA</h2>
     </div>
     <div class="text-box">
-        <p>A sobrelotação é um problema crescente no Metro do Porto, especialmente nos horários de maior movimento. Carruagens cheias, falta de conforto e dificuldades de distribuição dos passageiros comprometem a eficiência e a experiência de quem depende deste transporte diariamente.</p>
+        <div class="text-content">
+            <h3>OS SERVIÇOS NÃO ACOMPANHAM A PROCURA</h3>
+            <p>A sobrelotação é um problema crescente no Metro do Porto, especialmente nos horários de maior movimento. Carruagens cheias, falta de conforto e dificuldades de distribuição dos passageiros comprometem a eficiência e a experiência de quem depende deste transporte diariamente.</p>
+        </div>
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2024. Todos os direitos reservados.</p>
+    <p>LAPR1 - LEI. Instituto Superior de Engenharia do Porto. 2024.</p>
 </footer>
 
 </body>

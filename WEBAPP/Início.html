@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developers</title>
+    <title>Início</title>
     <style>
         /* Garante que o HTML e o Body ocupem 100% da altura da janela */
         html, body {
@@ -25,7 +25,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             border-radius: 8px;
             margin: 10px;
         }
@@ -37,7 +37,7 @@
 
         /* Estilos para os links de navegação */
         nav a {
-            color: #fff;
+            color: #FFD700;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
@@ -57,15 +57,15 @@
             justify-content: center;
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
             margin: 10px;
         }
 
         /* Título da seção principal */
         .left-side h1 {
-            font-size: 2.5em;
-            color: #fff;
+            font-size: 4em;
+            color: #001f55;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
@@ -78,17 +78,39 @@
             text-transform: uppercase;
         }
 
+        /* Caixa de texto para imagem com flexbox */
         .text-box {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #001f55; /* Azul escuro como os botões */
             padding: 30px;
             border-radius: 8px;
-            max-width: 600px;
-            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: justified;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .text-box img {
+            max-width: 80%; /* Aumenta a imagem para ocupar 80% da caixa */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text-box .text-content {
+            max-width: 35%; /* O texto ocupa até 35% do espaço */
+            color: white;
+        }
+
+        .text-box h3 {
+            font-size: 2em;
+            color: #FFD700;
+            margin-bottom: 10px;
         }
 
         .text-box p {
-            font-size: 1.5em;
-            color: white;
+            font-size: 1.2em;
             line-height: 1.6;
         }
 
@@ -96,7 +118,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             margin-top: auto;
         }
 
@@ -124,16 +146,22 @@
 
 <main>
     <div class="left-side">
-        <h1>O DESAFIO DA SOBRELOTAÇÃO NO METRO DO PORTO</h1>
-        <h2>OS SERVIÇOS NÃO ACOMPANHAM A PROCURA</h2>
+        <h1>MyMetro</h1>
+        <h2>Um novo conceito que te permite movimentar mais facilmente no Metro do Porto</h2>
     </div>
+
+    <!-- Caixa de texto para imagem -->
     <div class="text-box">
-        <p>A sobrelotação é um problema crescente no Metro do Porto, especialmente nos horários de maior movimento. Carruagens cheias, falta de conforto e dificuldades de distribuição dos passageiros comprometem a eficiência e a experiência de quem depende deste transporte diariamente.</p>
+        <div class="text-content">
+            <h3>Acede aqui ao protótipo da MyMetro</h3>
+            <p>Explora o protótipo da MyMetro e descobre como a nossa app pode melhorar a tua experiência no Metro do Porto</p>
+        </div>
+        <img src="qr_code.png" alt="QR Code">
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2024. Todos os direitos reservados.</p>
+    <p>LAPR1 - LEI. Instituto Superior de Engenharia do Porto. 2024.</p>
 </footer>
 
 </body>
