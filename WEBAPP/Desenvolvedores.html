@@ -56,11 +56,6 @@
             color: #093eec; /* Azul para o link ativo */
         }
 
-        /* Não alterar a cor do "Desenvolvedores" se já estiver ativo */
-        nav a[href="Desenvolvedores.html"] {
-            color: #FFD700;
-        }
-
         /* Estilo para a seção principal */
         main {
             flex: 1;
@@ -142,9 +137,8 @@
     <nav>
         <a href="Início.html">Início</a>
         <a href="Desafio.html">Desafio</a>
-        <a href="App.html">App</a>
         <a href="Funcionalidades.html">Funcionalidades</a>
-        <a href="Desenvolvedores.html" class="active">Desenvolvedores</a> <!-- Página ativa -->
+        <a href="Desenvolvedores.html">Desenvolvedores</a> <!-- Sem classe 'active' fixa -->
     </nav>
 </header>
 
@@ -190,16 +184,17 @@
     // Seleciona todos os links de navegação
     const links = document.querySelectorAll('nav a');
 
-    // Adiciona o evento de clique a cada link
-    links.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove a classe 'active' de todos os links
-            links.forEach(l => l.classList.remove('active'));
+    // Obtém o caminho atual da URL (arquivo da página)
+    const currentPage = window.location.pathname.split('/').pop();
 
-            // Adiciona a classe 'active' no link clicado
-            this.classList.add('active');
-        });
-    });
+    // Percorre cada link e verifica se a URL corresponde
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active'); // Adiciona a classe 'active' ao link correspondente
+        } else {
+            link.classList.remove('active'); // Remove a classe 'active' dos outros links
+        }
+    }
 </script>
 
 </body>

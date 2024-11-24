@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <style>
+        /* Garante que o HTML e o Body ocupem 100% da altura da janela */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('imagem_fundo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        header img {
+            width: 160px;
+            height: 110px;
+        }
+
+        /* Estilos para os links de navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #093eec;
+        }
+
+        /* Estilo para a seção principal */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly; /* Distribui o conteúdo para evitar scroll */
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Título da seção principal */
+        .left-side h1 {
+            font-size: 4em;
+            color: #001f55;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Subtítulo da seção principal */
+        .left-side h2 {
+            font-size: 1.5em;
+            color: #fff;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        /* Caixa de texto para imagem com flexbox */
+        .text-box {
+            background-color: #001f55; /* Azul escuro como os botões */
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 90%; /* Limita a largura total */
+            box-sizing: border-box;
+        }
+
+        .text-box img {
+            max-width: 200px; /* Tamanho fixo para a imagem */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text-box .text-content {
+            color: white;
+            text-align: left;
+            flex: 1;
+        }
+
+        .text-box h3 {
+            font-size: 2em;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .text-box p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer p {
+            color: white;
+            font-size: 1em;
+        }
+
+        /* Ajustes responsivos */
+        @media (max-height: 768px) {
+            main {
+                flex: 1;
+                justify-content: space-evenly;
+            }
+
+            .text-box {
+                flex-direction: column; /* Organiza a imagem e texto em coluna */
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-box img {
+                max-width: 200px; /* Mantém o tamanho original */
+            }
+
+            .text-box .text-content {
+                text-align: center; /* Centraliza o texto em telas menores */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        <img src="logo.png" alt="Logo">
+    </h1>
+    <nav>
+        <a href="Início.html">INÍCIO</a>
+        <a href="Desafio.html">DESAFIO</a>
+        <a href="Funcionalidades.html">FUNCIONALIDADES</a>
+        <a href="Desenvolvedores.html">DESENVOLVEDORES</a>
+    </nav>
+</header>
+
+<main>
+    <div class="left-side">
+        <h1>MyMetro</h1>
+        <h2>Um novo conceito que te permite movimentar mais facilmente no Metro do Porto</h2>
+    </div>
+
+    <!-- Caixa de texto para imagem -->
+    <div class="text-box">
+        <div class="text-content">
+            <h3>Acede aqui ao protótipo da MyMetro</h3>
+            <p>Explora o protótipo da MyMetro e descobre como a nossa app pode melhorar a tua experiência no Metro do Porto.</p>
+        </div>
+        <img src="qr_code.png" alt="QR Code">
+    </div>
+</main>
+
+<footer>
+    <p>LAPR1 - LEI. Instituto Superior de Engenharia do Porto. 2024.</p>
+</footer>
+
+</body>
+</html>
+
